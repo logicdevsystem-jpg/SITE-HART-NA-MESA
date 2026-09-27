@@ -1057,7 +1057,14 @@ textarea:focus-visible,
 }
 
 @media (max-width: 700px) {
-  .hero::before { background-position: 72% center; }
+  /* No celular a animação contínua de zoom da foto de fundo (hero-zoom)
+     pesa demais e pode deixar a rolagem "travando"/soluçando. Por isso
+     ela fica desligada aqui — a imagem continua exatamente a mesma,
+     só não fica dando zoom infinito. No computador nada muda. */
+  .hero::before {
+    background-position: 72% center;
+    animation: none;
+  }
   .hero::after {
     background: linear-gradient(90deg, #190c1fdc, #200f27a3);
   }
@@ -1095,11 +1102,22 @@ textarea:focus-visible,
   .progress { margin: 8px 4px 27px; }
   .progress-item { flex-basis: 45px; }
   .two-col { grid-template-columns: 1fr; }
-  .theme { flex-basis: 118px; min-height: 138px; }
-  .theme img { width: 74px; height: 74px; }
-  .theme-emoji { font-size: 34px; }
-  .theme strong { font-size: 11px; }
+  /* Cards de tema um pouco maiores no celular (antes ficavam no mesmo
+     tamanho "apertado" dos outros elementos da etapa). */
+  .theme { flex-basis: 140px; min-height: 160px; }
+  .theme img { width: 90px; height: 90px; }
+  .theme-emoji { font-size: 38px; }
+  .theme strong { font-size: 12px; }
   .kit-grid { grid-template-columns: 1fr; }
+
+  /* O círculo decorativo da última seção tem 560px de largura fixa e
+     sempre sobra além da tela no celular — é isso que empurrava a
+     página para o lado e deixava a rolagem "torta"/com uma barra
+     sobrando. Aqui ele fica desligado só no celular; no computador
+     continua aparecendo normalmente. */
+  .experience-inner::before {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1131,8 +1149,8 @@ textarea:focus-visible,
 /* Telas bem estreitas: os cards de tema ficam um pouco menores para
    caber melhor na faixa de scroll horizontal. */
 @media (max-width: 360px) {
-  .theme { flex-basis: 102px; }
-  .theme img { width: 62px; height: 62px; }
+  .theme { flex-basis: 122px; }
+  .theme img { width: 76px; height: 76px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1147,6 +1165,7 @@ textarea:focus-visible,
   .reveal { opacity: 1; transform: none; }
   .carousel-track { transition: none; }
 }
+
 /* =========================================================
    WAVE SECTION DIVIDER
    Ondas entre as três seções
