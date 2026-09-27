@@ -1104,11 +1104,39 @@ textarea:focus-visible,
   .two-col { grid-template-columns: 1fr; }
   /* Cards de tema um pouco maiores no celular (antes ficavam no mesmo
      tamanho "apertado" dos outros elementos da etapa). */
-  .theme { flex-basis: 140px; min-height: 160px; }
-  .theme img { width: 90px; height: 90px; }
-  .theme-emoji { font-size: 38px; }
-  .theme strong { font-size: 12px; }
+  /* Temas: no celular a faixa com scroll horizontal virava um
+     carrossel que "andava" — agora é uma grade fixa de 2 colunas,
+     sem arrastar/deslizar, mostrando todos os temas de uma vez, com
+     as imagens bem maiores. */
+  .theme-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+  .theme {
+    flex: none;
+    width: 100%;
+    min-height: 190px;
+    scroll-snap-align: none;
+  }
+  .theme img { width: 120px; height: 120px; }
+  .theme-emoji { font-size: 44px; }
+  .theme strong { font-size: 13px; }
+
   .kit-grid { grid-template-columns: 1fr; }
+
+  /* Foto de cada kit: quadrada e sem cortar nada da imagem (antes
+     "cover" cortava as bordas da foto pra caber num retângulo baixo). */
+  .kit-photo {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #f8f4f9;
+    padding: 6px;
+  }
 
   /* O círculo decorativo da última seção tem 560px de largura fixa e
      sempre sobra além da tela no celular — é isso que empurrava a
@@ -1149,8 +1177,8 @@ textarea:focus-visible,
 /* Telas bem estreitas: os cards de tema ficam um pouco menores para
    caber melhor na faixa de scroll horizontal. */
 @media (max-width: 360px) {
-  .theme { flex-basis: 122px; }
-  .theme img { width: 76px; height: 76px; }
+  .theme { min-height: 168px; }
+  .theme img { width: 98px; height: 98px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
