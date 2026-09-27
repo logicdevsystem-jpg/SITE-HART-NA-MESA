@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arthe Festa na Mesa | Pegue e Monte</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SEÇÃO 1: ABERTURA -->
+  <main class="hero" id="inicio">
+    <header class="header">
+      <a class="brand" href="#inicio" aria-label="Arthe Festa na Mesa, início">
+        <span class="brand-mark">
+          <img
+            src="imagens/logo-site.png"
+            alt="Logo Arthe Festa na Mesa"
+            class="brand-logo"
+            onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'brand-fallback',textContent:'✦'}))"
+          >
+        </span>
+        <span>
+          <strong>Arthe Festa na Mesa</strong>
+          <small>Decoração & Pegue e Monte</small>
+        </span>
+      </a>
+
+      <button class="btn btn-small open-modal" type="button">
+        Agende sua festa <span>↗</span>
+      </button>
+    </header>
+
+    <div class="hero-content">
+      <span class="eyebrow">✦ Seu momento merece uma festa especial</span>
+
+      <h1>
+        Transformamos sonhos em festas
+        <em>inesquecíveis.</em>
+      </h1>
+
+      <p>
+        Escolha o tema, encontre o kit ideal e conte como será sua festa.
+        Nós cuidamos dos detalhes com você.
+      </p>
+
+      <button class="btn btn-main open-modal" type="button">
+        Agende sua festa <span>→</span>
+      </button>
+
+      <small>É rápido, simples e sem compromisso.</small>
+    </div>
+
+    <div class="hero-corner">
+      ✳ Kits Pegue e Monte para celebrar do seu jeito
+    </div>
+  </main>
+
+  <!-- SEÇÃO 2: CARROSSEL -->
+  <section class="showcase section-pad" id="inspiracoes">
+    <div class="section-heading reveal">
+      <span class="section-kicker">NOSSA INSPIRAÇÃO</span>
+      <h2>Uma festa com a sua cara</h2>
+      <p>
+        Do delicado ao cheio de cores: encontre uma ideia para começar
+        a imaginar sua comemoração.
+      </p>
+    </div>
+
+    <div class="carousel reveal" aria-label="Galeria de ideias para festas">
+      <button
+        class="carousel-arrow"
+        id="slide-prev"
+        type="button"
+        aria-label="Imagem anterior"
+      >←</button>
+
+      <div class="carousel-viewport" id="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+
+          <figure class="carousel-slide">
+            <img
+              src="imagens/temas/imagem1.png"
+              alt="Decoração colorida para uma celebração"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>01 / 04</span>
+              <strong>Momentos cheios de cor</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="carousel-slide">
+            <img
+              src="imagens/temas/imagem2.png"
+              alt="Mesa decorada para uma comemoração"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>02 / 04</span>
+              <strong>Detalhes que encantam</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="carousel-slide">
+            <img
+              src="imagens/temas/imagem3.png"
+              alt="Festa com luzes e decoração especial"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>03 / 04</span>
+              <strong>Um cenário para lembrar</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="carousel-slide">
+            <img
+              src="imagens/temas/imagem4.png"
+              alt="Celebração iluminada e festiva"
+              loading="lazy"
+            >
+            <figcaption>
+              <span>04 / 04</span>
+              <strong>Celebre do seu jeito</strong>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+
+      <button
+        class="carousel-arrow"
+        id="slide-next"
+        type="button"
+        aria-label="Próxima imagem"
+      >→</button>
+    </div>
+
+    <div class="carousel-dots" id="carousel-dots"></div>
+
+    <div class="showcase-footer reveal">
+      <span>Quer ver os temas e trabalhos da Arthe?</span>
+      <a
+        href="https://www.instagram.com/arthefestanamesa/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Ver @arthefestanamesa ↗</a>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: COMO FUNCIONA -->
+  <section class="experience section-pad" id="como-funciona">
+
+    <!--
+      IMAGEM DE FUNDO DESTA SEÇÃO: imagens/FOTO-FINAL.png
+      Pra trocar, é só trocar o nome/caminho dentro de url('...').
+    -->
+    <div
+      class="experience-bg"
+      style="--experience-bg-image:url('imagens/FOTO-FINAL.png');"
+      aria-hidden="true"
+    ></div>
+
+    <div class="experience-inner">
+
+      <div class="experience-copy reveal">
+        <span class="section-kicker">PEGUE E MONTE</span>
+        <h2>Você escolhe. A festa ganha vida.</h2>
+
+        <p>
+          O Pegue e Monte deixa a organização mais leve. Conte o que você
+          imagina e a Arthe ajuda a encontrar um kit para a ocasião.
+        </p>
+
+        <button class="btn btn-main open-modal" type="button">
+          Agende sua festa <span>→</span>
+        </button>
+      </div>
+
+      <div class="steps-list">
+        <article class="info-card reveal">
+          <span>01</span>
+          <div>
+            <h3>Conte sobre a festa</h3>
+            <p>Informe a data, o local e como entrar em contato com você.</p>
+          </div>
+          <b aria-hidden="true">↗</b>
+        </article>
+
+        <article class="info-card reveal">
+          <span>02</span>
+          <div>
+            <h3>Escolha tema e kit</h3>
+            <p>Selecione uma ideia no formulário ou descreva o tema desejado.</p>
+          </div>
+          <b aria-hidden="true">✦</b>
+        </article>
+
+        <article class="info-card reveal">
+          <span>03</span>
+          <div>
+            <h3>Receba o retorno</h3>
+            <p>A equipe confere seu pedido e entra em contato para combinar os detalhes.</p>
+          </div>
+          <b aria-hidden="true">✓</b>
+        </article>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <strong>Arthe Festa na Mesa</strong>
+      <a
+        href="https://www.instagram.com/arthefestanamesa/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram ↗</a>
+    </footer>
+  </section>
+
+  <!-- FORMULÁRIO: ABRE AO CLICAR EM "AGENDE SUA FESTA" -->
+  <div class="modal" id="modal" hidden>
+    <div class="backdrop" data-close></div>
+
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <button class="close" type="button" data-close aria-label="Fechar">×</button>
+
+      <div id="form-area">
+        <div class="progress" aria-label="Progresso do agendamento">
+          <div class="progress-item active">
+            <span>1</span><small>Dados</small>
+          </div>
+          <i></i>
+          <div class="progress-item">
+            <span>2</span><small>Tema</small>
+          </div>
+          <i></i>
+          <div class="progress-item">
+            <span>3</span><small>Kit</small>
+          </div>
+          <i></i>
+          <div class="progress-item">
+            <span>4</span><small>Resumo</small>
+          </div>
+        </div>
+
+        <form id="booking-form">
+
+          <!-- ETAPA 1 -->
+          <section class="step" data-step="1">
+            <div class="assistant-row">
+              <span class="assistant-avatar">
+                <img src="imagens/avatar-dados.png" alt="">
+              </span>
+              <div class="assistant-bubble">
+                <h2 id="dialog-title">Oi! Vamos planejar sua festa?</h2>
+                <p class="description">Me conta um pouquinho sobre você pra gente começar.</p>
+              </div>
+            </div>
+
+            <div class="fields">
+              <label>
+                Nome completo *
+                <input name="nome" type="text" autocomplete="name"
+                       placeholder="Digite seu nome completo" required>
+              </label>
+
+              <div class="two-col">
+                <label>
+                  WhatsApp *
+                  <input name="whatsapp" type="tel" autocomplete="tel"
+                         inputmode="tel" maxlength="15"
+                         placeholder="(00) 00000-0000" required>
+                </label>
+
+                <label>
+                  E-mail (opcional)
+                  <input name="email" type="email" autocomplete="email"
+                         placeholder="voce@email.com">
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Data da festa *
+                  <input name="data" type="date" required>
+                </label>
+
+                <label>
+                  Horário (opcional)
+                  <input name="horario" type="time">
+                </label>
+              </div>
+
+              <label>
+                Bairro ou local da festa *
+                <input name="local" type="text"
+                       placeholder="Ex.: Centro, salão de festas..." required>
+              </label>
+            </div>
+          </section>
+
+          <!-- ETAPA 2 -->
+          <section class="step" data-step="2" hidden>
+            <div class="assistant-row">
+              <span class="assistant-avatar">
+                <img src="imagens/avatar-tema.png" alt="">
+              </span>
+              <div class="assistant-bubble">
+                <h2>Que tema você imaginou pra festa?</h2>
+                <p class="description">Escolha uma das opções abaixo, ou me conta se você já tem uma ideia diferente 💭</p>
+              </div>
+            </div>
+
+            <!--
+              TEMAS DA FESTA:
+              Cada tema é um bloco <label class="theme"> com uma foto real.
+              Para adicionar mais temas, copie um bloco inteiro (do <label>
+              até </label>) e troque: o "src" da imagem, o alt, o texto do
+              nome e o "value" do input. Vira uma faixa com scroll horizontal.
+            -->
+            <div class="theme-carousel">
+              <label class="theme">
+                <input type="radio" name="tema" value="Princesas">
+                <img src="imagens/temas/princesas.webp" alt="Tema Princesas">
+                <strong>Princesas</strong>
+              </label>
+
+              <label class="theme">
+                <input type="radio" name="tema" value="Heróis">
+                <img src="imagens/temas/herois.webp" alt="Tema Heróis">
+                <strong>Heróis</strong>
+              </label>
+
+              <label class="theme">
+                <input type="radio" name="tema" value="Safari">
+                <img src="imagens/temas/safari.webp" alt="Tema Safari">
+                <strong>Safari</strong>
+              </label>
+
+              <label class="theme">
+                <input type="radio" name="tema" value="Unicórnio">
+                <img src="imagens/temas/unicornio.webp" alt="Tema Unicórnio">
+                <strong>Unicórnio</strong>
+              </label>
+
+              <label class="theme">
+                <input type="radio" name="tema" value="Fazendinha">
+                <img src="imagens/temas/fazendinha.webp" alt="Tema Fazendinha">
+                <strong>Fazendinha</strong>
+              </label>
+
+              <!--
+                "Personalizado" mantém o value="Outro" (é o que o
+                script.js usa pra saber quando mostrar o campo de texto
+                livre) — só a imagem e o rótulo mudaram.
+              -->
+              <label class="theme">
+                <input type="radio" name="tema" value="Outro">
+                <img src="imagens/avatar-personalizar.png" alt="Tema personalizado">
+                <strong>Personalizado</strong>
+              </label>
+            </div>
+
+            <label class="extra" id="other-theme" hidden>
+              Qual tema você deseja? *
+              <input name="temaPersonalizado" type="text"
+                     placeholder="Descreva o tema da festa">
+            </label>
+
+            <p class="error" id="theme-error" role="alert"></p>
+          </section>
+
+          <!-- ETAPA 3 -->
+          <section class="step" data-step="3" hidden>
+            <div class="assistant-row">
+              <span class="assistant-avatar">
+                <img src="imagens/avatar-kit.png" alt="">
+              </span>
+              <div class="assistant-bubble">
+                <h2>Agora vamos montar o kit perfeito!</h2>
+                <p class="description">
+                  Cada kit já vem prontinho — é só escolher o que combina mais com a sua festa.
+                </p>
+              </div>
+            </div>
+
+            <!--
+              KITS PEGUE E MONTE:
+              Cada kit mostra uma foto do kit já montado e a lista de
+              peças que vêm dentro dele.
+            -->
+            <div class="kit-grid">
+              <label class="kit">
+                <input type="radio" name="kit" value="Básico">
+                <img class="kit-photo" src="imagens/kits/basico.png" alt="Kit Básico montado">
+                <strong>Básico</strong>
+                <p class="kit-desc">Uma decoração charmosa e prática.</p>
+                <ul class="kit-items">
+                  <li>Toalha de mesa temática</li>
+                  <li>Balões coloridos (10 un.)</li>
+                  <li>Topo de bolo</li>
+                </ul>
+              </label>
+
+              <label class="kit">
+                <input type="radio" name="kit" value="Completo">
+                <img class="kit-photo" src="imagens/kits/completo.png" alt="Kit Completo montado">
+                <strong>Completo</strong>
+                <p class="kit-desc">Mais elementos para sua mesa.</p>
+                <ul class="kit-items">
+                  <li>Toalha de mesa + painel de fundo</li>
+                  <li>Balões coloridos (20 un.)</li>
+                  <li>Topo de bolo + plaquinhas</li>
+                  <li>Potes decorativos (4 un.)</li>
+                </ul>
+              </label>
+
+              <label class="kit">
+                <input type="radio" name="kit" value="Premium">
+                <img class="kit-photo" src="imagens/kits/premium.png" alt="Kit Premium montado">
+                <strong>Premium</strong>
+                <p class="kit-desc">Uma composição mais marcante.</p>
+                <ul class="kit-items">
+                  <li>Toalha + painel de fundo + arco de balões</li>
+                  <li>Balões coloridos (35 un.)</li>
+                  <li>Topo de bolo + plaquinhas + luminária</li>
+                  <li>Potes e taças decorativas (8 un.)</li>
+                </ul>
+              </label>
+            </div>
+
+            <label class="extra">
+              Observações e itens desejados (opcional)
+              <textarea name="observacoes" rows="3"
+                        placeholder="Conte detalhes que vão nos ajudar..."></textarea>
+            </label>
+
+            <p class="error" id="kit-error" role="alert"></p>
+          </section>
+
+          <!-- ETAPA 4 -->
+          <section class="step" data-step="4" hidden>
+            <div class="assistant-row">
+              <span class="assistant-avatar">
+                <img src="imagens/avatar-resumo.png" alt="">
+              </span>
+              <div class="assistant-bubble">
+                <h2>Tudo certo! Vamos conferir?</h2>
+                <p class="description">Dá uma olhadinha se está tudo certo antes de enviar pro nosso WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="summary" id="summary"></div>
+
+            <p class="hint">
+              A data será confirmada pela equipe após verificar a disponibilidade.
+            </p>
+          </section>
+
+          <p class="error" id="send-error" role="alert"></p>
+
+          <div class="actions">
+            <button class="btn btn-back" id="back" type="button" hidden>
+              ← Voltar
+            </button>
+
+            <button class="btn" id="next" type="button">
+              Continuar →
+            </button>
+
+            <button class="btn" id="send" type="submit" hidden>
+              Enviar pelo WhatsApp →
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="success" id="success" hidden>
+        <div class="success-icon">✓</div>
+        <h2>Prontinho!</h2>
+        <p>
+          Já preparamos tudo por aqui! Em breve alguém da nossa equipe vai
+          te chamar no WhatsApp pra confirmar os detalhes da sua festa.
+        </p>
+        <button class="btn" type="button" data-close>Voltar ao site</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="confetti" aria-hidden="true"></div>
+</body>
+</html>
